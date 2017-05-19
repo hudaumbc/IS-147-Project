@@ -1,9 +1,6 @@
 /**NEW NEW NEW**/
 import java.util.Scanner;
 
-/**
- * Created by KhoaFaise on 5/18/17.
- */
 public class ConnectFour {
 
         public static boolean placeToken(char[][] field, int column, char color) {
