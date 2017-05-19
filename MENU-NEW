@@ -10,14 +10,12 @@ public class Menu {
         final int RockPaperScissors = 1;
         final int BlackJack = 2;
         final int ConnectFour = 3;
-        final int TicTacToe = 4;
 
         //prompt the user to pick which game they want to play
         System.out.print("\nPick a number to play a game:");
         System.out.print("\n(1) Rock, Paper, Scissors");
         System.out.print("\n(2) Blackjack");
         System.out.print("\n(3) Connect Four");
-        System.out.print("\n(4) TicTacToe");
         int player = input.nextInt();
 
         switch (player) {
@@ -33,14 +31,10 @@ public class Menu {
                 ConnectFour conFour = new ConnectFour();
                 conFour.main(new String[]{});
                 break;
-            case TicTacToe:
-                TicTacToe ticTT = new TicTacToe();
-                ticTT.main(new String[]{});
-                break;
+
         }
     }
 }
-
 
 
 
