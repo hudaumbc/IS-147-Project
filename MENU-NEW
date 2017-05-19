@@ -1,0 +1,46 @@
+/**
+ * NEW NEW NEW.
+ */
+
+
+import java.util.Scanner;
+public class Menu {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        final int RockPaperScissors = 1;
+        final int BlackJack = 2;
+        final int ConnectFour = 3;
+        final int TicTacToe = 4;
+
+        //prompt the user to pick which game they want to play
+        System.out.print("\nPick a number to play a game:");
+        System.out.print("\n(1) Rock, Paper, Scissors");
+        System.out.print("\n(2) Blackjack");
+        System.out.print("\n(3) Connect Four");
+        System.out.print("\n(4) TicTacToe");
+        int player = input.nextInt();
+
+        switch (player) {
+            case RockPaperScissors:
+                RockPaperScissors rockPS = new RockPaperScissors();
+                rockPS.main(new String[]{});
+                break;
+            case BlackJack:
+                BlackJack blkJack = new BlackJack();
+                blkJack.main(new String[]{});
+                break;
+            case ConnectFour:
+                ConnectFour conFour = new ConnectFour();
+                conFour.main(new String[]{});
+                break;
+            case TicTacToe:
+                TicTacToe ticTT = new TicTacToe();
+                ticTT.main(new String[]{});
+                break;
+        }
+    }
+}
+
+
+
+
