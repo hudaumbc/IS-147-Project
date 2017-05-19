@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 public class ConnectFour {
 
-        public static boolean putDisk(char[][] field, int column, char color) {
+        public static boolean placeToken(char[][] field, int column, char color) {
             if (field[0][column] != ' ')
                 return false;
             for (int row = 0; row < 7; ++row) {
@@ -37,13 +37,15 @@ public class ConnectFour {
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
             char[][] field = new char[7][7];
+            
+            
             for (int i = 0; i < 7; ++i)
                 for (int j = 0; j < 7; ++j)
                     field[i][j] = ' ';
 
             printField(field);
 
-            boolean isRed = true;
+            boolean tokenIsRed = true;
             while (true) {
                 if (isRed)
                     System.out.println("Player Red's turn!");
@@ -55,14 +57,14 @@ public class ConnectFour {
                     System.out.println("Column should be from 1 to 7");
                     continue;
                 }
-                if (!putDisk(field, column - 1, isRed ? 'R' : 'Y')) {
+                if (!placeToken(field, column - 1, isRed ? 'R' : 'Y')) {
+                    
                     System.out.println("This column is filled! Choose another one.");
+                    
                     continue;
                 }
-
                 printField(field);
-                isRed = !isRed;
-
+                tokenIsRed = !tokenIsRed;
             }
         }
     }
