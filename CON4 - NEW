@@ -44,7 +44,7 @@ public class ConnectFour {
 
             boolean tokenIsRed = true;
             while (true) {
-                if (isRed)
+                if (tokenIsRed)
                     System.out.println("Player Red's turn!");
                 else
                     System.out.println("Player Yellow's turn!");
@@ -54,7 +54,7 @@ public class ConnectFour {
                     System.out.println("Column should be from 1 to 7");
                     continue;
                 }
-                if (!placeToken(field, column - 1, isRed ? 'R' : 'Y')) {
+                if (!placeToken(field, column - 1, tokenIsRed ? 'R' : 'Y')) {
                     
                     System.out.println("This column is filled! Choose another one.");
                     
